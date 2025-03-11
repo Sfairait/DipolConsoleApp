@@ -59,13 +59,11 @@ string ReadConsole()
                 if (!newSymbol)
                 {
                     Console.Write("\b \b");
-                    if(limit > tempString.Count)
-                        tempString.Add(keyInfo.KeyChar);
-                    else
+                    if(limit <= tempString.Count)
                     {
                         tempString.Clear();
-                        tempString.Add(keyInfo.KeyChar);
                     }
+                    tempString.Add(keyInfo.KeyChar);
                 }
                 else
                 {
